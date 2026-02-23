@@ -56,9 +56,7 @@ def main() -> None:
                 weight = 75.0
                 level = "Intermediate"
 
-            # This method name depends on your implementation.
-            # If it differs, paste the method list from workout_gen_v6.py and I’ll adjust.
-            workout: Dict[str, Any] = gen.generate_workout(
+            workout: Dict[str, Any] = gen.generate_structured_workout(
                 user_id=args.user_id,
                 target_body_parts=target_parts,
                 duration_minutes=duration,
@@ -80,7 +78,7 @@ def main() -> None:
                 ex0 = main_exs[0]
                 exercise_id = ex0.get("exercise_id")
                 if exercise_id:
-                    logger.log_exercise(
+                    logger.log_exercise_realtime(
                         user_id=args.user_id,
                         workout_id=workout_id,
                         exercise_id=exercise_id,
