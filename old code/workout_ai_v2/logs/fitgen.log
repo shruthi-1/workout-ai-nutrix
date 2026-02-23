@@ -1,0 +1,11 @@
+2025-12-11 22:12:45,117 - numexpr.utils - INFO - NumExpr defaulting to 8 threads.
+2025-12-11 22:12:45,795 - utils - INFO - 🚀 Starting FitGen AI v5.0 FastAPI service
+2025-12-11 22:12:50,863 - utils - WARNING - ⚠️  MongoDB Connection Failed - using in-memory storage
+2025-12-11 22:12:50,865 - utils - INFO - Using in-memory storage - collections created on demand
+2025-12-11 22:12:50,919 - utils - INFO - 📚 Loaded 2918 exercises from CSV
+2025-12-11 22:12:51,000 - utils - INFO - ✅ Loaded 2918 exercises to memory
+2025-12-11 22:12:51,001 - utils - INFO - ✅ FitGen core initialized in API context
+2025-12-11 22:13:35,859 - utils - INFO - ✅ User created (in-memory): avinash_20251211221335
+2025-12-11 22:14:29,123 - utils - INFO - Found 20 exercises for Chest
+2025-12-11 22:14:29,124 - utils - INFO - Found 20 exercises for Back
+2025-12-11 22:14:29,125 - utils - INFO - Found 20 exercises for Shoulders

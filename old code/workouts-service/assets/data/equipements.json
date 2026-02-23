@@ -1,0 +1,20 @@
+aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin 015810276598.dkr.ecr.us-east-1.amazonaws.com
+
+
+docker buildx build --platform linux/amd64 -t nutrix-gateway .
+docker buildx build --platform linux/amd64 -t workouts-service .
+docker buildx build --platform linux/amd64 -t user-service .
+
+docker tag workouts-service:latest 015810276598.dkr.ecr.us-east-1.amazonaws.com/workouts-service:latest
+
+docker tag nutrix-gateway:latest 015810276598.dkr.ecr.us-east-1.amazonaws.com/nutrix-gateway:latest
+docker push 015810276598.dkr.ecr.us-east-1.amazonaws.com/nutrix-gateway:latest
+docker push <account-id>.dkr.ecr.ap-south-1.amazonaws.com/my-service:latest
+    latest: digest: sha256:3a6cebe10e12fdf17dc43dbcc46cfa24ab858de707f7a10f44a1170b712cd156 size: 856
+
+docker tag user-service:latest 015810276598.dkr.ecr.us-east-1.amazonaws.com/user-service:latest
+docker push 015810276598.dkr.ecr.us-east-1.amazonaws.com/user-service:latest
+    latest: digest: sha256:6d1ffd99e7ec4fe5619e2f795aeb34a84663703ab092668c3f020939906de311 size: 856
+
+docker tag workouts-service:latest 015810276598.dkr.ecr.us-east-1.amazonaws.com/workouts-service:latest
+docker push 015810276598.dkr.ecr.us-east-1.amazonaws.com/workouts-service:latest

@@ -1,0 +1,7 @@
+2025-12-08 20:04:59,266 - utils - INFO - Initializing FitGen AI v5.0...
+2025-12-08 20:04:59,276 - utils - WARNING - ⚠️  MongoDB driver not available - using in-memory storage
+2025-12-08 20:04:59,276 - utils - INFO - Using in-memory storage - collections created on demand
+2025-12-08 20:04:59,306 - utils - INFO - 📚 Loaded 2886 exercises from CSV
+2025-12-08 20:04:59,561 - utils - INFO - ✅ Loaded 2886 exercises to memory
+2025-12-08 20:04:59,561 - utils - INFO - ✅ ✅ All systems initialized successfully!
+2025-12-08 20:10:25,013 - utils - INFO - ✅ User created (in-memory): eshwar_20251208201025

@@ -1,0 +1,182 @@
+{
+  "workout_id": "7e372768",
+  "user_id": "avinash_20260127170632",
+  "date": "2026-01-27T17:10:01.593920",
+  "total_duration": 60,
+  "sections": {
+    "warmup": {
+      "exercises": [
+        {
+          "name": "Joint Mobility Flow",
+          "duration_seconds": 120,
+          "description": "Gentle joint circles, arm swings, hip mobility"
+        },
+        {
+          "name": "Light Cardio Activation",
+          "duration_seconds": 420,
+          "description": "Walking, light jogging in place, jumping jacks"
+        }
+      ],
+      "total_duration": 9
+    },
+    "main": {
+      "exercises": [
+        {
+          "exercise_id": "44a63099",
+          "title": "Wide-Grip Decline Barbell Bench Press",
+          "body_part": "Chest",
+          "equipment": "Barbell",
+          "sets": 3,
+          "reps": [
+            12,
+            15
+          ],
+          "rest_seconds": 30,
+          "rpe_range": [
+            4,
+            7
+          ],
+          "notes": "Form cue: nan",
+          "modifications": [
+            "Use supported version or reduce complexity"
+          ]
+        },
+        {
+          "exercise_id": "c2cef8ca",
+          "title": "Jordan Shallow Foam Roller Thoracic Extension",
+          "body_part": "Shoulders",
+          "equipment": "Foam Roll",
+          "sets": 3,
+          "reps": [
+            12,
+            15
+          ],
+          "rest_seconds": 30,
+          "rpe_range": [
+            4,
+            7
+          ],
+          "notes": "Form cue: nan",
+          "modifications": [
+            "Use supported version or reduce complexity"
+          ]
+        },
+        {
+          "exercise_id": "ab8e478a",
+          "title": "Bench Press With Short Bands",
+          "body_part": "Chest",
+          "equipment": "Bands",
+          "sets": 3,
+          "reps": [
+            12,
+            15
+          ],
+          "rest_seconds": 30,
+          "rpe_range": [
+            4,
+            7
+          ],
+          "notes": "Form cue: nan",
+          "modifications": [
+            "Use supported version or reduce complexity"
+          ]
+        },
+        {
+          "exercise_id": "f14aa16f",
+          "title": "Jordan Shallow Band-Resisted Thread the Needle",
+          "body_part": "Shoulders",
+          "equipment": "Bands",
+          "sets": 3,
+          "reps": [
+            12,
+            15
+          ],
+          "rest_seconds": 30,
+          "rpe_range": [
+            4,
+            7
+          ],
+          "notes": "Form cue: nan",
+          "modifications": [
+            "Use supported version or reduce complexity"
+          ]
+        },
+        {
+          "exercise_id": "0f24529e",
+          "title": "Bench Press - With Bands",
+          "body_part": "Chest",
+          "equipment": "Bands",
+          "sets": 3,
+          "reps": [
+            12,
+            15
+          ],
+          "rest_seconds": 30,
+          "rpe_range": [
+            4,
+            7
+          ],
+          "notes": "Form cue: nan",
+          "modifications": [
+            "Use supported version or reduce complexity"
+          ]
+        },
+        {
+          "exercise_id": "d8fa05df",
+          "title": "Neck Press",
+          "body_part": "Chest",
+          "equipment": "Barbell",
+          "sets": 3,
+          "reps": [
+            12,
+            15
+          ],
+          "rest_seconds": 30,
+          "rpe_range": [
+            4,
+            7
+          ],
+          "notes": "Form cue: nan",
+          "modifications": [
+            "Use supported version or reduce complexity"
+          ]
+        },
+        {
+          "exercise_id": "3b07d620",
+          "title": "Rusin Band Pull-Apart",
+          "body_part": "Chest",
+          "equipment": "Bands",
+          "sets": 3,
+          "reps": [
+            12,
+            15
+          ],
+          "rest_seconds": 30,
+          "rpe_range": [
+            4,
+            7
+          ],
+          "notes": "Form cue: nan",
+          "modifications": [
+            "Use supported version or reduce complexity"
+          ]
+        }
+      ],
+      "total_duration": 45,
+      "estimated_exercises_count": 7,
+      "intensity_level": "Intermediate"
+    },
+    "cooldown": {
+      "exercises": [
+        {
+          "name": "Full Body Stretch",
+          "duration_seconds": 360,
+          "description": "Hold stretches for major muscle groups"
+        }
+      ],
+      "total_duration": 6
+    }
+  },
+  "motivation": "💯 Any movement is progress — you've got this!",
+  "daily_tip": "🍎 Nutrition supports your training goals."
+}

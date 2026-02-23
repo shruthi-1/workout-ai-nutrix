@@ -1,0 +1,2 @@
+session_id,user_id,date,planned_duration,actual_duration,completion_%,exercise_count,avg_difficulty,overall_satisfaction,satisfaction_description,energy_level,recovery_needed,notes
+01924ef6,avinash_20251211221335,2025-12-11T22:15:47.816669,60,55,91,2,7.5,8,"Excellent, great session",7,False,"Felt strong, slight lower-back tension."

@@ -1,0 +1,33 @@
+{
+  "status": "ok",
+  "session_id": "6fea5986",
+  "session": {
+    "session_id": "6fea5986",
+    "user_id": "avinash_20260127170632",
+    "date": "2026-01-27T17:12:49.448491",
+    "planned_duration": 60,
+    "actual_duration": 52,
+    "duration_variance": -8,
+    "completion_percentage": 86,
+    "exercises": [
+      {
+        "title": "Push-Up",
+        "difficulty_rating": 6,
+        "difficulty_description": "Moderate burn"
+      },
+      {
+        "title": "Pull-Up",
+        "difficulty_rating": 8,
+        "difficulty_description": "Hard today"
+      }
+    ],
+    "exercise_count": 2,
+    "avg_exercise_difficulty": 7,
+    "overall_satisfaction": 8,
+    "satisfaction_description": "Excellent, great session",
+    "notes": "Good session",
+    "energy_level": 7,
+    "recovery_needed": false,
+    "raw_data": true
+  }
+}
