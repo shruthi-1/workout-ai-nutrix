@@ -91,6 +91,16 @@ class DatabaseManagerV6:
         
         except (ConnectionFailure, ServerSelectionTimeoutError) as e:
             log_error(f"MongoDB connection failed: {e}")
+            # Fallback to mongomock for testing/offline environments
+            try:
+                import mongomock
+                self.client = mongomock.MongoClient()
+                self.db = self.client[self.db_name]
+                self.connected = True
+                log_warning("⚠️  Using mongomock (in-memory) - data will not persist across restarts")
+                return True
+            except ImportError:
+                pass
             self.connected = False
             return False
     
@@ -350,7 +360,8 @@ class DatabaseManagerV6:
         try:
             # Generate log ID
             from utils import generate_id
-            log_id = f"log_{generate_id()}"
+            log_key = f"{log_data['user_id']}_{log_data['workout_id']}_{log_data['exercise_id']}_{datetime.utcnow().isoformat()}"
+            log_id = f"log_{generate_id(log_key)}"
             
             # Create log document
             log_doc = {

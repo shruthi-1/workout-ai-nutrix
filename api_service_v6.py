@@ -519,6 +519,7 @@ def complete_workout(user_id: str, workout_id: str):
 # HISTORY & ANALYTICS ENDPOINTS
 # ============================================================
 
+@app.get("/users/{user_id}/workouts/history", tags=["Analytics"])
 @app.get("/users/{user_id}/history", tags=["Analytics"])
 def get_workout_history(
     user_id: str,
@@ -546,6 +547,7 @@ def get_workout_history(
         log_error(f"Error fetching workout history: {e}")
         raise HTTPException(status_code=500, detail=str(e))
 
+@app.get("/users/{user_id}/analytics/calories", tags=["Analytics"])
 @app.get("/users/{user_id}/calories", tags=["Analytics"])
 def get_calorie_summary(
     user_id: str,
