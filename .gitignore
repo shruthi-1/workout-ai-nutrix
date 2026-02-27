@@ -4,3 +4,6 @@ __pycache__/
 .env
 logs/
 exports/
+# Benchmark report artifacts (generated at runtime)
+reports/*.json
+reports/*.md
