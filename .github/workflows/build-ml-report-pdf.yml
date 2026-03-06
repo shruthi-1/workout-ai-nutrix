@@ -1,0 +1,53 @@
+name: Build ML Report PDF
+
+on:
+  push:
+    paths:
+      - "docs/NEXT_STEPS_ML_IMPLEMENTATION_REPORT.md"
+      - ".github/workflows/build-ml-report-pdf.yml"
+  workflow_dispatch:
+
+jobs:
+  build-pdf:
+    name: Convert Markdown report to PDF
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    permissions:
+      contents: read
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Install pandoc and LaTeX engine
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y --no-install-recommends \
+            pandoc \
+            texlive-latex-base \
+            texlive-latex-recommended \
+            texlive-latex-extra \
+            texlive-fonts-recommended \
+            texlive-fonts-extra
+
+      - name: Generate PDF from Markdown
+        run: |
+          pandoc \
+            docs/NEXT_STEPS_ML_IMPLEMENTATION_REPORT.md \
+            --pdf-engine=pdflatex \
+            --toc \
+            --toc-depth=3 \
+            --variable geometry:margin=2.5cm \
+            --variable fontsize=11pt \
+            --variable colorlinks=true \
+            --variable linkcolor=blue \
+            --variable urlcolor=blue \
+            --highlight-style=tango \
+            -o docs/NEXT_STEPS_ML_IMPLEMENTATION_REPORT.pdf
+
+      - name: Upload PDF artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: ml-implementation-report-pdf
+          path: docs/NEXT_STEPS_ML_IMPLEMENTATION_REPORT.pdf
+          retention-days: 90

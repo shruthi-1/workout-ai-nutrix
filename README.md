@@ -94,6 +94,50 @@ artefacts (retained 30 days).
 | File | Contents |
 |------|----------|
 | `docs/ml-models-and-suitability.md` | Inventory and suitability review of every ML/analytics algorithm in the codebase |
+| `docs/NEXT_STEPS_ML_IMPLEMENTATION_REPORT.md` | Detailed organisational roadmap for evolving FitGen AI into a data-driven personalisation platform (Phases 1–3) |
 | `docs/API_DOCUMENTATION.md` | REST endpoint reference |
 | `docs/performance_test_report.md` | Soak and stress test results (200-iteration run) |
 | `IMPLEMENTATION_SUMMARY.md` | v6.0 feature summary |
+
+---
+
+## Generating the ML report PDF
+
+### Locally (requires pandoc and a LaTeX engine)
+
+```bash
+# Install pandoc and a minimal LaTeX engine on macOS (Homebrew)
+brew install pandoc
+brew install --cask mactex-no-gui   # or: brew install basictex
+
+# Install on Ubuntu/Debian
+sudo apt-get install pandoc texlive-latex-recommended texlive-latex-extra \
+    texlive-fonts-recommended texlive-fonts-extra
+
+# Generate the PDF
+pandoc \
+  docs/NEXT_STEPS_ML_IMPLEMENTATION_REPORT.md \
+  --pdf-engine=pdflatex \
+  --toc \
+  --toc-depth=3 \
+  --variable geometry:margin=2.5cm \
+  --variable fontsize=11pt \
+  --variable colorlinks=true \
+  --variable linkcolor=blue \
+  --variable urlcolor=blue \
+  --highlight-style=tango \
+  -o docs/NEXT_STEPS_ML_IMPLEMENTATION_REPORT.pdf
+```
+
+The output PDF is written to `docs/NEXT_STEPS_ML_IMPLEMENTATION_REPORT.pdf`.
+
+### Via GitHub Actions (automated)
+
+The workflow `.github/workflows/build-ml-report-pdf.yml` runs automatically:
+
+- **On push** whenever `docs/NEXT_STEPS_ML_IMPLEMENTATION_REPORT.md` or the
+  workflow file itself is changed.
+- **Manually** via *Actions → Build ML Report PDF → Run workflow*.
+
+After the job completes, download the generated PDF from the **Artifacts**
+section of the workflow run (retained for 90 days).
